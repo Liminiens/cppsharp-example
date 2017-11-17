@@ -35,14 +35,14 @@ namespace InterfaceGenerator
             driver.ParserOptions.Verbose = true;
             driver.Options.GeneratorKind = GeneratorKind.CSharp;
 
-            var module = driver.Options.AddModule("Lib");
+            var module = driver.Options.AddModule("SampleLibrary");
             var includeFolder = Path.Combine(cppRoot, @"include");
             module.IncludeDirs.Add(includeFolder);
             module.Headers.Add(@"library.hpp");
 
-            var libFolder = Path.Combine(cppRoot, @"build\Release");
+            var libFolder = Path.Combine(cppRoot, @"build_clang\Release");
             module.LibraryDirs.Add(libFolder);
-            module.Libraries.Add(@"Lib.dll");
+            module.Libraries.Add(@"SampleLibrary.dll");
 
             module.OutputNamespace = "CppSharpGenerated";
             driver.Options.OutputDir = "Generated";

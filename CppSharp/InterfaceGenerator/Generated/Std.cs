@@ -8,5 +8,5 @@ using System;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Runtime.CompilerServices;
-[assembly:InternalsVisibleTo("Lib")]
+[assembly:InternalsVisibleTo("SampleLibrary")]
 

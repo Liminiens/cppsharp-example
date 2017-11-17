@@ -4,6 +4,8 @@
 .idea/
 cmake-build-debug/
 build/
+build_msvc/
+build_clang/
 
 # User-specific files
 *.suo

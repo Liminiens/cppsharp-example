@@ -16,12 +16,12 @@ namespace CppSharpGenerated
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("Lib", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0HelloClass@@QEAA@AEBV0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("Lib", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?hello@HelloClass@@QEAAXXZ")]
             internal static extern void Hello(global::System.IntPtr instance);
         }
@@ -114,22 +114,22 @@ namespace CppSharpGenerated
             internal float b;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("Lib", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0Foo@@QEAA@HM@Z")]
             internal static extern global::System.IntPtr ctor(global::System.IntPtr instance, int a, float b);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("Lib", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="??0Foo@@QEAA@AEBV0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("Lib", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?print@Foo@@QEAAXXZ")]
             internal static extern void Print(global::System.IntPtr instance);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("Lib", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="?FooAdd@@YAHPEAVFoo@@@Z")]
             internal static extern int Add(global::System.IntPtr instance);
         }
