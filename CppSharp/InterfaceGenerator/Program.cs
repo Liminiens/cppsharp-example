@@ -1,6 +1,7 @@
 ﻿using System;
+using CppSharp;
 
-namespace CppSharp.Core
+namespace InterfaceGenerator
 {
     class Program
     {
