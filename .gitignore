@@ -7,6 +7,9 @@ build/
 build_msvc/
 build_clang/
 
+CppSharpGenerated/
+SampleLibrary.dll
+
 # User-specific files
 *.suo
 *.user

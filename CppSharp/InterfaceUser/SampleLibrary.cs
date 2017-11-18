@@ -16,13 +16,8 @@ namespace CppSharpGenerated
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
-                EntryPoint="??0HelloClass@@QEAA@AEBV0@@Z")]
-            internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
-
-            [SuppressUnmanagedCodeSecurity]
-            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
-                EntryPoint="?hello@HelloClass@@QEAAXXZ")]
+            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.ThisCall,
+                EntryPoint = "_ZN10HelloClass5helloEv")]
             internal static extern void Hello(global::System.IntPtr instance);
         }
 
@@ -47,7 +42,7 @@ namespace CppSharpGenerated
         private static void* __CopyValue(global::CppSharpGenerated.HelloClass.__Internal native)
         {
             var ret = Marshal.AllocHGlobal(sizeof(global::CppSharpGenerated.HelloClass.__Internal));
-            *(global::CppSharpGenerated.HelloClass.__Internal*) ret = native;
+            *(global::CppSharpGenerated.HelloClass.__Internal*)ret = native;
             return ret.ToPointer();
         }
 
@@ -63,21 +58,6 @@ namespace CppSharpGenerated
             if (native == null)
                 return;
             __Instance = new global::System.IntPtr(native);
-        }
-
-        public HelloClass()
-        {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::CppSharpGenerated.HelloClass.__Internal));
-            __ownsNativeInstance = true;
-            NativeToManagedMap[__Instance] = this;
-        }
-
-        public HelloClass(global::CppSharpGenerated.HelloClass _0)
-        {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::CppSharpGenerated.HelloClass.__Internal));
-            __ownsNativeInstance = true;
-            NativeToManagedMap[__Instance] = this;
-            *((global::CppSharpGenerated.HelloClass.__Internal*) __Instance) = *((global::CppSharpGenerated.HelloClass.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -114,23 +94,18 @@ namespace CppSharpGenerated
             internal float b;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
-                EntryPoint="??0Foo@@QEAA@HM@Z")]
-            internal static extern global::System.IntPtr ctor(global::System.IntPtr instance, int a, float b);
+            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.ThisCall,
+                EntryPoint = "_ZN3FooC2Eif")]
+            internal static extern void ctor(global::System.IntPtr instance, int a, float b);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
-                EntryPoint="??0Foo@@QEAA@AEBV0@@Z")]
-            internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
-
-            [SuppressUnmanagedCodeSecurity]
-            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
-                EntryPoint="?print@Foo@@QEAAXXZ")]
+            [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.ThisCall,
+                EntryPoint = "_ZN3Foo5printEv")]
             internal static extern void Print(global::System.IntPtr instance);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("SampleLibrary", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
-                EntryPoint="?FooAdd@@YAHPEAVFoo@@@Z")]
+                EntryPoint = "_Z6FooAddP3Foo")]
             internal static extern int Add(global::System.IntPtr instance);
         }
 
@@ -155,7 +130,7 @@ namespace CppSharpGenerated
         private static void* __CopyValue(global::CppSharpGenerated.Foo.__Internal native)
         {
             var ret = Marshal.AllocHGlobal(sizeof(global::CppSharpGenerated.Foo.__Internal));
-            *(global::CppSharpGenerated.Foo.__Internal*) ret = native;
+            *(global::CppSharpGenerated.Foo.__Internal*)ret = native;
             return ret.ToPointer();
         }
 
@@ -179,14 +154,6 @@ namespace CppSharpGenerated
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
             __Internal.ctor((__Instance + __PointerAdjustment), a, b);
-        }
-
-        public Foo(global::CppSharpGenerated.Foo _0)
-        {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::CppSharpGenerated.Foo.__Internal));
-            __ownsNativeInstance = true;
-            NativeToManagedMap[__Instance] = this;
-            *((global::CppSharpGenerated.Foo.__Internal*) __Instance) = *((global::CppSharpGenerated.Foo.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -220,12 +187,12 @@ namespace CppSharpGenerated
         {
             get
             {
-                return ((global::CppSharpGenerated.Foo.__Internal*) __Instance)->a;
+                return ((global::CppSharpGenerated.Foo.__Internal*)__Instance)->a;
             }
 
             set
             {
-                ((global::CppSharpGenerated.Foo.__Internal*) __Instance)->a = value;
+                ((global::CppSharpGenerated.Foo.__Internal*)__Instance)->a = value;
             }
         }
 
@@ -233,12 +200,12 @@ namespace CppSharpGenerated
         {
             get
             {
-                return ((global::CppSharpGenerated.Foo.__Internal*) __Instance)->b;
+                return ((global::CppSharpGenerated.Foo.__Internal*)__Instance)->b;
             }
 
             set
             {
-                ((global::CppSharpGenerated.Foo.__Internal*) __Instance)->b = value;
+                ((global::CppSharpGenerated.Foo.__Internal*)__Instance)->b = value;
             }
         }
     }
